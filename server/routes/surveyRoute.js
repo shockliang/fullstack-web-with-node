@@ -4,7 +4,7 @@ const requireCredits = require("../middlewares/requireCredits");
 const Mailer = require("../services/Mailer");
 const surveyTemplate = require("../services/emailTemplates/surveyTempalte");
 
-const Survey = mongoose.model("surveys");
+const Survey = mongoose.model("survey");
 
 module.exports = app => {
   app.post("/api/surveys", requireLogin, requireCredits, (req, res) => {
